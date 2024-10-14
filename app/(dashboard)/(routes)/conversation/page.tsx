@@ -7,6 +7,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import ReactMarkdown from "react-markdown";
 
 import { Heading } from "@/components/heading";
 import { 
@@ -26,7 +27,7 @@ import { cn } from "@/lib/utils";
 import { formSchema } from "./constants";
 
 interface ChatCompletionRequestMessage {
-    role: 'user';
+    role: 'user' | 'system' | 'assistant';
     content: string;
 }
 
@@ -138,9 +139,21 @@ const ConversationPage = () => {
                                 )}
                             >
                                 {message.role === "user" ? <UserAvatar /> : <BotAvatar />}
-                                <p className="text-sm">
-                                    {message.content}
-                                </p>
+                                <ReactMarkdown
+                                    components={{
+                                        pre: ({ node, ...props }) => (
+                                            <div className="overflow-auto w-full my-2 bg-black/10 p-2 rounded-lg">
+                                                <pre {...props} />
+                                            </div>
+                                        ),
+                                        code: ({ node, ...props }) => (
+                                            <code className="bg-black/10 rounded-lg p-1" {...props} />
+                                        )
+                                    }}
+                                    className="text-sm overflow-hidden leading-7"
+                                >
+                                    {message.content || ""}
+                                </ReactMarkdown>
                             </div>
                         ))}
                     </div>
