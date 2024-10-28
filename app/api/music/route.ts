@@ -4,6 +4,7 @@ import Replicate from "replicate";
 import { Buffer } from 'buffer';
 
 import { increaseApiLimit, checkApiLimit } from '@/lib/api-limit';
+import { checkSubscription } from '@/lib/subscription';
 
 const replicate = new Replicate({
     auth: process.env.REPLICATE_API_TOKEN,
@@ -24,8 +25,9 @@ export async function POST(req: Request) {
         }
 
         const freeTrial = await checkApiLimit();
+        const isPro = await checkSubscription();
 
-        if (!freeTrial) {
+        if (!freeTrial && !isPro) {
             return new NextResponse("Free trial has expired.", { status: 403 });
         }
 
@@ -44,7 +46,10 @@ export async function POST(req: Request) {
         const base64Audio = audioBuffer.toString('base64');
         const audioUrl = `data:audio/wav;base64,${base64Audio}`;
 
-        await increaseApiLimit();
+        if (!isPro) {
+            await increaseApiLimit();
+        }
+        
 
         return NextResponse.json({ audio: audioUrl });
     } catch (error) {

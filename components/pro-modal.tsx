@@ -17,6 +17,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useProModal } from "@/hooks/use-pro-modal";
 import { cn } from "@/lib/utils";
+import toast from "react-hot-toast";
 
 const tools = [
   {
@@ -56,15 +57,12 @@ export const ProModal = () => {
   const [loading, setLoading] = useState(false);
 
   const onSubscribe = async () => {
-    try { 
-      // Make an API request to the /api/stripe endpoint
+    try {
       const response = await axios.get("/api/stripe");
       
-      // Redirect the user to the URL returned by the API
       window.location.href = response.data.url;
     } catch (error) {
-      // Log the error and a custom message in case of failure
-      console.log(error, "STRIPE_CLIENT_ERROR");
+      toast.error("Something went wrong");
     } finally {
       setLoading(false);
     }
@@ -103,7 +101,8 @@ export const ProModal = () => {
         </DialogHeader>
         <DialogFooter>
           <Button
-          onClick={onSubscribe}
+            disabled={loading}
+            onClick={onSubscribe}
             size="lg"
             variant="premium"
             className="w-full"
