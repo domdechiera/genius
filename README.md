@@ -46,6 +46,12 @@ npm run dev
 stripe listen --forward-to localhost:3000/api/webhook
 ```
 
+For ease of database management run:
+
+```bash
+npx prisma studio
+```
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## The Stack
