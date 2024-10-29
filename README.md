@@ -29,8 +29,8 @@ npm install
    - Clerk API Keys: [https://dashboard.clerk.com/app/instances/api-keys](https://dashboard.clerk.com/apps/app_2nL1vIwafp2xEya6jELtIw4yu1I/instances/ins_2nL1vBVKaB8OFubJHuzGnVC2sgW/api-keys)
    - Stripe API Keys: [https://dashboard.stripe.com/test/apikeys](https://dashboard.stripe.com/test/apikeys)
    - Stripe Webhook Endpoint Creation and Secret Key: [https://dashboard.stripe.com/test/workbench/webhooks](https://dashboard.stripe.com/test/workbench/webhooks)
-   - Supabase API Keys: [https://supabase.com/dashboard/project/<Your-Project-Name>/settings/api](https://supabase.com/dashboard/project/settings/api)
-   - Supabase Database URL: [https://supabase.com/dashboard/project/<Your-Project-Name>/settings/database](https://supabase.com/dashboard/project/settings/database)
+   - Supabase API Keys: [https://supabase.com/dashboard/project/[Your-Project-Name]/settings/api](https://supabase.com/dashboard/project/settings/api)
+   - Supabase Database URL: [https://supabase.com/dashboard/project/[Your-Project-Name]/settings/database](https://supabase.com/dashboard/project/settings/database)
 
    
 
