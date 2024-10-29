@@ -1,4 +1,4 @@
-# ![](genius-logo.png)Genius
+# ![](genius-logo.png) Genius
 
 ## A simplistic AI platform both in design and usability.
 
@@ -50,6 +50,8 @@ This project utilises the following third-party tools:
 - [Vercel](https://vercel.com) -  Build, scale, and secure a faster, more personalised web.
 - [Lucide](https://lucide.dev/) - Beautiful and consistent icons.
 - [Crisp](https://crisp.chat/) - Business messaging platform.
+- [Tailwind CSS](https://tailwindcss.com/) - Rapidly build modern websites without ever leaving your HTML.
+- [TypeScript](https://www.typescriptlang.org/) - JavaScript with syntax for types.
 
 ## Deploy on Vercel
 
