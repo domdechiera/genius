@@ -24,7 +24,7 @@ const testimonials = [
         name: "Sam",
         avatar: "S",
         title: "Solutions Provider",
-        description: "Fixes a lot of clients issues."
+        description: "Fixes a lot of my client's issues."
     },
     {
         name: "Janice",
