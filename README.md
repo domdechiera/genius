@@ -63,8 +63,8 @@ This project utilises the following third-party tools:
 - [Crisp](https://crisp.chat/) - Business messaging platform.
 - [Tailwind CSS](https://tailwindcss.com/) - Rapidly build modern websites without ever leaving your HTML.
 - [TypeScript](https://www.typescriptlang.org/) - JavaScript with syntax for types.
-- [OpenAI API](https://platform.openai.com/) -  Utilise the latest AI models including DALL-E (Image Generation) and  GPT 4o-mini (Conversation and Code Generation).
-- [Replicate AI](https://replicate.com) - Utilise a variety of AI models with a single API (Video and Music Generation).
+- [OpenAI API](https://platform.openai.com/) -  API platform with latest models including DALL-E (Image Generation) and  GPT 4o-mini (Conversation and Code Generation).
+- [Replicate AI](https://replicate.com) - Variety of AI models through a single API (Video and Music Generation).
 - [Prisma ORM](https://prisma.io) - Simplify working and interacting with databases.
 
 ## Deploy on Vercel
