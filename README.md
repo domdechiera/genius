@@ -22,7 +22,18 @@ git clone https://github.com/domdechiera/genius
 npm install
 ```
 
-3. Rename `.env-example` to `.env` and fill in your API keys and Supabase address.
+3. Rename `.env-example` to `.env` and fill in your API keys, Supabase database URL, and Stripe webhooks endpoint URL obtained from:
+
+   - Open AI API Keys: [https://platform.openai.com/api-keys](https://platform.openai.com/api-keys)
+   - Replicate API Keys: [https://replicate.com/account/api-tokens](https://replicate.com/account/api-tokens)
+   - Clerk API Keys: [https://dashboard.clerk.com/app/instances/api-keys](https://dashboard.clerk.com/apps/app_2nL1vIwafp2xEya6jELtIw4yu1I/instances/ins_2nL1vBVKaB8OFubJHuzGnVC2sgW/api-keys)
+   - Stripe API Keys: [https://dashboard.stripe.com/test/apikeys](https://dashboard.stripe.com/test/apikeys)
+   - Stripe Webhook Endpoint Creation and Secret Key: [https://dashboard.stripe.com/test/workbench/webhooks](https://dashboard.stripe.com/test/workbench/webhooks)
+   - Supabase API Keys: [https://supabase.com/dashboard/project/<Your-Project-Name>/settings/api](https://supabase.com/dashboard/project/settings/api)
+   - Supabase Database URL: [https://supabase.com/dashboard/project/<Your-Project-Name>/settings/database](https://supabase.com/dashboard/project/settings/database)
+
+   
+
 4. Run the development server:
 
 ```bash
@@ -52,6 +63,8 @@ This project utilises the following third-party tools:
 - [Crisp](https://crisp.chat/) - Business messaging platform.
 - [Tailwind CSS](https://tailwindcss.com/) - Rapidly build modern websites without ever leaving your HTML.
 - [TypeScript](https://www.typescriptlang.org/) - JavaScript with syntax for types.
+- [OpenAI API](https://platform.openai.com/) -  Utilise the latest AI models including DALL-E (Image Generation) and  GPT 4o-mini (Conversation).
+- [Replicate](https://replicate.com) - Utilise a variety of AI models with a single API.
 
 ## Deploy on Vercel
 
