@@ -56,15 +56,15 @@ This project utilises the following third-party tools:
 
 - [Clerk](https://clerk.com) - Authentication and user management.
 - [Supabase](https://supabase.com) - The open source Firebase alternative.
-- [Stripe](https://stripe.com) - Payment processing and subscription management 
+- [Stripe](https://stripe.com) - Payment processing and subscription management.
 - [shadcn/ui](https://ui.shadcn.com/) - Beautifully designed components that you can copy and paste into your apps.
 - [Vercel](https://vercel.com) -  Build, scale, and secure a faster, more personalised web.
 - [Lucide](https://lucide.dev/) - Beautiful and consistent icons.
 - [Crisp](https://crisp.chat/) - Business messaging platform.
 - [Tailwind CSS](https://tailwindcss.com/) - Rapidly build modern websites without ever leaving your HTML.
 - [TypeScript](https://www.typescriptlang.org/) - JavaScript with syntax for types.
-- [OpenAI API](https://platform.openai.com/) -  Utilise the latest AI models including DALL-E (Image Generation) and  GPT 4o-mini (Conversation).
-- [Replicate](https://replicate.com) - Utilise a variety of AI models with a single API.
+- [OpenAI API](https://platform.openai.com/) -  Utilise the latest AI models including DALL-E (Image Generation) and  GPT 4o-mini (Conversation and Code Generation).
+- [Replicate](https://replicate.com) - Utilise a variety of AI models with a single API (Video and Music Generation).
 
 ## Deploy on Vercel
 
