@@ -22,17 +22,31 @@ git clone https://github.com/domdechiera/genius
 npm install
 ```
 
-3. Rename `.env-example` to `.env` and fill in your API keys, Supabase database URL, and Stripe webhooks endpoint URL obtained from:
+3. Rename `.env-example` to `.env` and fill in your API keys:
 
-   - Open AI API Keys: [https://platform.openai.com/api-keys](https://platform.openai.com/api-keys)
-   - Replicate API Keys: [https://replicate.com/account/api-tokens](https://replicate.com/account/api-tokens)
-   - Clerk API Keys: [https://dashboard.clerk.com/app/instances/api-keys](https://dashboard.clerk.com/apps/app_2nL1vIwafp2xEya6jELtIw4yu1I/instances/ins_2nL1vBVKaB8OFubJHuzGnVC2sgW/api-keys)
-   - Stripe API Keys: [https://dashboard.stripe.com/test/apikeys](https://dashboard.stripe.com/test/apikeys)
-   - Stripe Webhook Endpoint Creation and Secret Key: [https://dashboard.stripe.com/test/workbench/webhooks](https://dashboard.stripe.com/test/workbench/webhooks)
-   - Supabase API Keys: [https://supabase.com/dashboard/project/[Your-Project-Name]/settings/api](https://supabase.com/dashboard/project/settings/api)
-   - Supabase Database URL: [https://supabase.com/dashboard/project/[Your-Project-Name]/settings/database](https://supabase.com/dashboard/project/settings/database)
-
+   ```bash
+   # Clerk
+   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+   CLERK_SECRET_KEY=
+   NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+   NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+   NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/dashboard
+   NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/dashboard
    
+   # AI Keys
+   OPENAI_API_KEY=
+   REPLICATE_API_TOKEN=
+   
+   # Connect to Supabase via Prisma connection pooling with Supavisor
+   DATABASE_URL=
+   DIRECT_URL=
+   
+   # Stripe
+   STRIPE_API_KEY=
+   STRIPE_WEBHOOK_SECRET=
+   NEXT_PUBLIC_APP_URL=http://localhost:3000 
+   # localhost for testing only - in production add your Stripe webhooks endpoint URL
+   ```
 
 4. Run the development server:
 
@@ -40,13 +54,13 @@ npm install
 npm run dev
 ```
 
-4. For testing of Stripe payments run the following in a separate shell:
+5. For testing of Stripe payments run the following in a separate shell:
 
 ```bash
 stripe listen --forward-to localhost:3000/api/webhook
 ```
 
-5. For ease of database management run:
+6. For ease of database management run:
 
 ```bash
 npx prisma studio
@@ -75,7 +89,7 @@ This project utilises the following third-party tools:
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com) from the creators of Next.js.
+The easiest way to deploy this app is to use the [Vercel Platform](https://vercel.com) from the creators of Next.js.
 
 Check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
